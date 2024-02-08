@@ -57,3 +57,11 @@ console.log(m)
 
 var m = 0
 var m = 1
+
+const c = 19;
+// c = 100
+
+var name = "Hency"
+
+console.log(name + " is 21 years old");
+console.log(`${name} is 21 years old`)
