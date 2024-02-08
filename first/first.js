@@ -129,3 +129,32 @@ prnt();
 (function (a, b) {
     console.log(a + b)
 })(4, 4);
+
+// function print(){
+//     console.log("Hello World!")
+// }
+// print.call()
+// print.apply()
+
+let animal = {
+    name: "dog",
+    eat(a, b) { console.log(this.name + " is eating " + a + " " + b) }
+}
+
+let human = {
+    name: 'Ravi'
+}
+
+// animal.eat(5, "bones")
+// animal.eat.call(human, 5, "chips")
+// animal.eat.apply(human, [5, "chips"])
+
+let human_eat = animal.eat.bind(human)
+human_eat(5, "chips");
+
+let ob = {
+    prnt: function () {
+        console.log(this)
+    }
+}
+ob.prnt()
