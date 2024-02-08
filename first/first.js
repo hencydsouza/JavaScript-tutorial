@@ -107,4 +107,25 @@ var new_barr = b_arr.slice(0, 4);
 var c_arr = [1, 2, 3, 4, 5, 6]
 var new_carr = c_arr.slice(3)
 
-var new_carr2 = c_arr.slice(3,7)
+var new_carr2 = c_arr.slice(3, 7)
+
+// functions
+// console.log(print(5, 7))
+
+var a = 0;
+console.log(a)
+print();
+function print() {
+    var y = 0
+}
+console.log(a)
+// console.log(y)
+
+var prnt = function () {
+    console.log("awesome")
+}
+prnt();
+
+(function (a, b) {
+    console.log(a + b)
+})(4, 4);
