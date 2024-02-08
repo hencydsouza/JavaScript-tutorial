@@ -46,6 +46,14 @@ var num1 = 8, n = 2;
 console.log(num1 << n)
 console.log(num1 >> n)
 
-console.log(x)
-const x = 10
-console.log(x)
+// console.log(x)
+// const x = 10
+// console.log(x)
+
+for (var m = 0; m < 5; m++) {
+    console.log(m)
+}
+console.log(m)
+
+var m = 0
+var m = 1
