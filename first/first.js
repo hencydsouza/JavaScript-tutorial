@@ -158,3 +158,38 @@ let ob = {
     }
 }
 ob.prnt()
+
+// arrow functions
+let ob1 = {
+    name: 'fur',
+    prnt: function () {
+        console.log('a', this)
+        var an_prnt = () => {
+            console.log('b', this)
+        }
+        an_prnt()
+    }
+}
+ob1.prnt()
+
+// higher order functions
+
+// function canVote(age) { return (age >= 18) }
+// function canDrive(age) { return age >= 18 }
+// function canMarry(age) { return age >= 21 }
+
+// console.log(canDrive(11))
+// console.log(canVote(11))
+// console.log(canMarry(11))
+
+// console.log(canDrive(27))
+// console.log(canVote(27))
+// console.log(canMarry(27))
+
+function age_req(r_age) {
+    return function (age) { return age >= r_age }
+}
+
+console.log(age_req(18)(27))
+console.log(age_req(16)(27))
+console.log(age_req(16)(27))
