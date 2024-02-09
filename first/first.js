@@ -193,3 +193,93 @@ function age_req(r_age) {
 console.log(age_req(18)(27))
 console.log(age_req(16)(27))
 console.log(age_req(16)(27))
+
+// oops
+//encapsulation
+class box {
+    constructor(length) {
+        this.length = length
+        console.log("constructor called")
+    }
+    display() {
+        console.log(this)
+    }
+}
+
+let obj2 = new box(20)
+obj2.display()
+
+let father = {
+    name: 'jhon'
+}
+
+let son1 = {}
+let son = Object.create(father)
+console.log(father.isPrototypeOf(son))
+console.log(father.isPrototypeOf(son1))
+
+var parent = {
+    name: "Father",
+    sing() {
+        console.log("singing")
+    },
+    eat: function () {
+        console.log("eating")
+    },
+    drink: () => {
+        console.log("drinking")
+    }
+}
+
+var child = {
+    name: "Son",
+    eat: function () {
+        console.log("eating")
+    }
+}
+
+child.__proto__ = parent;
+
+for (let p in child) {
+    console.log(p + " " + child.hasOwnProperty(p))
+}
+
+//inheritance
+class Fruits {
+    constructor(color) {
+        this.color = color
+    }
+    // print(size) { console.log(size) }
+    print() { console.log(this) }
+    // print(s1, s2) {
+    //     console.log(s1 + s2)
+    // }
+}
+
+class Apple extends Fruits {
+    constructor(color, type) {
+        super(color)
+        this.type = type
+    }
+    print() { super.print() }
+}
+
+let obj4 = new Apple("red", "apple")
+obj4.print()
+let ob5 = new Fruits("red")
+ob5.print()
+// ob5.print(10)
+// ob5.print(12, 12)
+
+class Parent {
+    live() {
+        console.log("Iran")
+    }
+}
+
+class Child extends Parent {
+    live() { console.log("India") }
+}
+
+var ob3 = new Child()
+ob3.live()
