@@ -283,3 +283,28 @@ class Child extends Parent {
 
 var ob3 = new Child()
 ob3.live()
+
+// exception handling 
+try {
+    console.log(a1)
+    // console.log("hello")
+}
+catch { console.log("We got an error") }
+
+function a2(age) {
+    if (age < 16) {
+        try {
+            throw new Error("You are under aged");
+        }
+        catch (error) { console.log(error) }
+        finally { console.log("Program ended") }
+    } else {
+        console.log("You can vote")
+    }
+}
+a2(13)
+
+try {
+    console.log(a3)
+}
+finally { console.log("Program ended") }
