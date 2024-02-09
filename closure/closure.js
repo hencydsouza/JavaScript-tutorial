@@ -36,10 +36,9 @@ console.log(addby5(2))
 console.log(addby5(5))
 console.log(addby5(10))
 
-let mul = function (x, y) {
-    console.log(x * y);
-}
-let mulBy10 = mul.bind(this,10);
+let mul = (x) => (y) => console.log(x * y);
+let mulBy10 = mul(10)
 mulBy10(7);
 mulBy10(8);
 mulBy10(9);
+
